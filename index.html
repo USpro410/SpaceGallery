@@ -5,7 +5,7 @@
 <title>Space Gallery</title>
 <link href="site.css" rel="stylesheet">
 <link href="lightbox.css" rel="stylesheet">
-<script src="../_js/jquery.min.js"></script>
+<script src="jquery.min.js"></script>
 <script>
 $(document).ready(function() {
 	$('#gallery a').click(function(evt) {
@@ -22,7 +22,6 @@ $(document).ready(function() {
 		//don't let event go up page
 		evt.stopPropagation();
 	}); // end click
-
 	function displayImage() {
 		// add overlay
 		$('<div id="overlay"><div id="photo"></div></div>').prependTo('body');
@@ -36,7 +35,6 @@ $(document).ready(function() {
     	//fade in new image
 		$img.animate({opacity: 1}, 1000);
 	}
-
 	$('html').on('click',function(evt) {
 		var $overlay = $('#overlay');
 		if (evt.target == $overlay.get(0)) {
